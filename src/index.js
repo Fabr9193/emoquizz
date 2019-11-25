@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/app/App';
 import * as serviceWorker from './serviceWorker';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import Quizz from './components/quizz/Quizz';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -10,3 +12,22 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+//router
+const routing = (
+    <Router>
+      <div class="menu-h">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/quizz">quizz</Link>
+          </li>
+        </ul>
+        <Route exact path="/" component={App} />
+        <Route path="/quizz" component={Quizz} />
+      </div>
+    </Router>
+  )
+  ReactDOM.render(routing, document.getElementById('root'))
