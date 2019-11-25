@@ -1,0 +1,18 @@
+.Gitui {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+}
+
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.menu ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
