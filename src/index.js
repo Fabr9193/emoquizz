@@ -17,24 +17,38 @@ serviceWorker.unregister();
 //router
 const routing = (
     <Router>
-      <div className="menu-h">
+
+<div className="">
+        
+        <div  className="menu flex-column md:flex-row">
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/quizz">quizz</Link>
+            <Link to="/quizz">Quizz</Link>
+          </li>
+          <li>
+            <Link to="/emotions">Emotions</Link>
+          </li>
+          <li>
+            <Link to="/facts">Facts</Link>
+          </li>
+          <li>
+            <Link to="/scoreboard">Scoreboard</Link>
           </li>
           {/* to remove GITUI */}
           <li>
-            <Link to="/gitui">gitui</Link>
+            <Link to="/gitui">Gitui</Link>
           </li>
-          {/* GITUI */}
         </ul>
-        <Route exact path="/" component={App} />
-        <Route path="/quizz" component={Quizz} />
-        <Route path="/gitui" component={Gitui} />
+        </div>
+        <div className="">
+          <Route exact path="/" component={App} />
+          <Route path="/quizz" component={Quizz} />
+          <Route path="/gitui" component={Gitui} />
+        </div>
       </div>
     </Router>
   )
-  ReactDOM.render(routing, document.getElementById('root'))
+ReactDOM.render(routing, document.getElementById('root'))

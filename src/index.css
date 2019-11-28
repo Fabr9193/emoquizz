@@ -54434,3 +54434,30 @@ video {
     z-index: auto;
   }
 }
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+}
+.menu ul{
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 50px 0;
+ 
+}
+.menu li{
+  padding: 0 20px;
+  font-weight: 600;
+}
+ /* desktop view */
+@media(min-width: 800px) {
+  .menu ul {
+    flex-direction: row;
+  }
+  .menu ul {
+  padding: 5px 0;
+  }
+}
