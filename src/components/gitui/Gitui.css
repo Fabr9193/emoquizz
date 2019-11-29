@@ -2,3 +2,10 @@
   color: white;
   text-align: center;
 }
+.progress-bar {
+  border-radius: 15px;
+}
+.progress-bar .progress {
+  border-radius: 15px;
+  background-color: blue;
+}
