@@ -1,23 +1,13 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import './Quizz.css';
+import Card from './Card/'
 
 function Quizz() {
   return (
-    <div className="Quizz">
-      <header className="Quizz-header">
-        <img src={logo} className="Quizz-logo" alt="logo" />
-        <p>
-         This is the Quizz componennt
-        </p>
-        <a
-          href="/"
-          className="Quizz-link"
-          rel="noopener noreferrer"
-        >
-          Back to the home APP
-        </a>
-      </header>
+    <div className="mt-5 mx-auto flex items-center justify-between w-full flex-col md:flex-row">
+    <Card></Card>
+    <div className="hidden md:block text-black text-3xl">OR</div>
+    <Card></Card>
     </div>
   );
 }
